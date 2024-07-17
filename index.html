@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div class="background"></div>
+<div id="intro-container" class="intro-container">
+    <h1>BAYAW STUDY TOOL</h1>
+    <label for="topic-select">Select Topic:</label>
+    <select id="topic-select" class="custom-select">
+    </select>
+    <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
+</div>
+
+<footer>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <button id="home-btn" class="home-button">
+        <i class="fas fa-home"></i> 
+      <button id="settings-btn" class="settings-btn">
+        <i class="fas fa-cog"></i>
+      <button id="about-btn" class="about-btn">
+        <i class="fas fa-info-circle"></i>
+</footer>
+
+<div id="quiz-container" class="quiz-container hidden">
+    <div class="timer-container">
+        <div id="timer-indicator" class="timer-indicator"></div>
+    </div>
+    <div id="question-indicator" class="question-indicator"></div>
+    <div id="question-container">
+        <h2 id="question"></h2>
+    </div>
+    <div id="correct-answer" class="correct-answer"></div>
+    <div class="timer-indicator"></div>
+</div>
+
+<div class="navigation-buttons">
+    <button id="previous-btn" class="btn">Previous</button>
+    <button id="reveal-btn" class="btn">Reveal Answer</button>
+    <button id="next-btn" class="btn">Next</button>
+</div>
+
+<!-- Settings Modal -->
+<div id="settings-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Quiz Mode</h3>
+        <label for="automatic-mode">
+            <input type="radio" id="automatic-mode" name="quiz-mode" value="automatic">
+            Automatic (15 seconds per question)
+        </label>
+        <br>
+        <label for="manual-mode">
+            <input type="radio" id="manual-mode" name="quiz-mode" value="manual" checked>
+            Manual (no timer)
+        </label>
+        <br>
+        <button id="save-settings-btn" class="save-settings-btn">Save Settings</button>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about-modal" class="about-modal">
+    <div class="about-modal-content">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="src/css/style.css">
+        <span class="close">&times;</span>
+        <div class="about-modal-header">
+            <h2>About</h2>
+        </div>
+        <p>This app is a passion project designed by JHUN to help you learn and master key terms and definitions relevant to the licensure exam.
+        <p>We've compiled a vast collection of terms and definitions based on reliable sources like PAES/PNS and reputable review materials.</p>
+        <p>DISCLAIMER: All the information within the app is carefully curated from publicly available resources. I don't intend to monetize nor sell this app.</p>
+        <p>Creator: Jhunly D. Tapaya</p>
+        <a href="https://www.facebook.com/J00N.x" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+            <a href="mailto:example@example.com" class="social-icon email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://https://t.me/+w7adj8Kc1Qs2OTBl" target="_blank" class="social-icon telegram">
+                <i class="fab fa-telegram"></i>
+            
+    </div>
+</div>
+
+<script src="src/js/main.js"></script>
+</body>
+
+</html>
 
