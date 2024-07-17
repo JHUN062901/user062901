@@ -80,7 +80,7 @@ h1 {
 }
 
 h2 {
-    color: black; /* Black font color for subtitle */
+    color: #black; /* Black font color for subtitle */
     font-weight: bold;
     text-align: center;
     font-size: 1.2em; /* Adjust size as needed */
@@ -176,7 +176,7 @@ footer {
     border: 1px solid transparent;
     color: #1a936f; /* Change this value to your desired font color */
     padding: 10px 20px;
-    font-size: 2.3em;
+    font-size: 3em;
     cursor: pointer;
     margin: 0 40px; /* Space between the buttons */
 }
