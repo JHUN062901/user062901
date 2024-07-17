@@ -1,0 +1,343 @@
+body {
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/3964.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: wavy 10s infinite;
+    z-index: -1; /* Ensure background stays behind all content */
+}
+
+/* Wavy animation keyframes */
+@keyframes wavy {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+h1 {
+    color: #20A096; /* Green font color for the title */
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em; /* Adjust size as needed */
+    text-shadow: 2px 2px 2px white; /* White shadow effect */
+}
+
+.hidden {
+    display: none;
+}
+
+.start-quiz-btn {
+    background: rgba(0, 230, 150, 0.5); 
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 30px 60px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 20px; /* Increased border radius */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 2em; /* Increased font size */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a subtle border */
+}
+
+.start-quiz-btn:hover {
+    background-color: rgba(0, 255, 200, 0.8); 
+    color: white;
+}
+
+.quiz-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1; /* Increased line height for readability */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border-radius: 30px; /* Increased border radius */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 700px; /* Increased width */
+    max-width: 100%;
+    text-align: center;
+    padding: 70px; /* Increased padding */
+    margin: 50px; /* Increased margin */
+    font-size: 2em; /* Increased font size */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a subtle border */
+}
+
+h2 {
+    color: black; /* Black font color for subtitle */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #197870;
+    margin-bottom: 0.4px;
+    display: block;
+}
+
+.timer-container {
+    position: relative;
+    height: 20px; /* Increased height */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border-radius: 30px; /* Increased border radius */
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.timer-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #38CDB6; /* Color of the timer line */
+    border-radius: 30px; /* Increased border radius */
+    transition: width linear; /* Smooth transition for width changes */
+}
+
+.question-indicator {
+    color: #555;
+    margin-bottom: 40px; /* Increased margin */
+}
+
+#question-container {
+    margin-bottom: 50px; /* Increased margin */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; /* Increased margin */
+}
+
+.btn {
+    background: rgba(0, 230, 150, 0.5);
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 30px 60px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 20px; /* Increased border radius */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 2em; /* Increased font size */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a subtle border */
+}
+
+.btn:hover {
+    background-color: rgba(0, 255, 200, 0.8);
+    color: white;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap between buttons */
+}
+
+.correct-answer {
+    color: #20BD7C;
+    font-weight: bold;
+    margin-top: 50px; /* Increased margin */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white; 
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#home-btn, .settings-btn, .about-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #1a936f; /* Change this value to your desired font color */
+    padding: 10px 20px;
+    font-size: 2.3em;
+    cursor: pointer;
+    margin: 0 40px; /* Space between the buttons */
+}
+
+#home-btn:hover, .settings-btn:hover, .about-btn:hover {
+    background-color: transparent;
+    color: #114b5f;
+}
+
+.save-settings-btn {
+    background: rgba(0, 230, 150, 0.5);
+    color: white;
+    border: none;
+    padding: 30px 60px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 20px; /* Increased border radius */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1em; /* Increased font size */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a subtle border */
+
+}
+
+.save-settings-btn:hover {
+    background-color: rgba(0, 255, 200, 0.8);
+    color: white;
+}
+    
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for a glassy look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.78); /* Semi-transparent white background */
+    padding: 60px; /* Increased padding */
+    border: none;
+    width: 800px; /* Increased width */
+    text-align: center;
+    border-radius: 35px; /* Rounded corners */
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.4); /* Soft shadow */
+    font-size: 2em; /* Increased font size */
+    line-height: 1; /* Increased line height for readability */
+    position: relative; /* Ensure positioning context */
+    top: 50%; /* Move content down by 50% of its own height */
+    left: 50%; /* Move content right by 50% of its own width */
+    transform: translate(-50%, -50%); /* Center align content */
+}
+
+h3 {
+    color: #197870; /* Black font color for subtitle */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+.close {
+    color: #aaa;
+    position: absolute; /* Position close button relative to modal content */
+    top: 30px;
+    right: 30px;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#topic-select {
+    font-size: 1.3em; /* Increase font size */
+    padding: 37px; /* Increase padding for better click/tap area */
+    width: 250px; /* Increase width as needed */
+}
+
+.custom-select {
+    appearance: none; /* Remove default appearance */
+    -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+    -moz-appearance: none; /* Remove default appearance for Mozilla browsers */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 2em; /* Adjust font size as needed */
+    width: 250px; /* Adjust width as needed */
+    border-radius: 20px; /* Rounded edges */
+    border: 1px solid #ccc; /* Optional: Add border for visibility */
+    background-color: #fff; /* Optional: Set background color */
+}
+
+.custom-select:hover {
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.custom-select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #88d498; /* Optional: Change border color on focus */
+}
+
+.about-modal {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for a glassy look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-modal-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px; /* Increased padding */
+    border-radius: 20px; /* Rounded corners */
+    max-width: 40%;
+    max-height: 90%;
+    overflow: auto;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    font-size: 1.5em; /* Increased font size */
+}
+
+.about-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.about-modal-header h2 {
+    margin: 0;
+}
+
+.about-modal-header .close {
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.about-modal-header .close:hover {
+    color: black;
+}
+
+
+
